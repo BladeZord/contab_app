@@ -1,17 +1,70 @@
-# contab_app
+# Contab App
 
-A new Flutter project.
+Aplicación móvil de contabilidad personal desarrollada con **Flutter**, orientada a llevar el control de ingresos, gastos, cuentas y movimientos financieros de forma simple, ordenada y escalable.
 
-## Getting Started
+## Descripción
 
-This project is a starting point for a Flutter application.
+**Contab App** es una aplicación enfocada en el registro y administración de finanzas personales. Su objetivo es permitir al usuario:
 
-A few resources to get you started if this is your first Flutter project:
+- registrar ingresos y gastos,
+- organizar movimientos por categorías,
+- administrar cuentas como efectivo, banco o tarjeta,
+- visualizar información resumida desde un dashboard,
+- y construir una base sólida para futuras mejoras como backend, sincronización y reportes avanzados.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+El proyecto está siendo desarrollado bajo una arquitectura modular para facilitar el mantenimiento, la escalabilidad y la evolución del MVP.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Objetivo del proyecto
+
+Construir una aplicación móvil funcional para uso personal que permita gestionar operaciones contables básicas desde una interfaz clara, moderna y organizada.
+
+Este proyecto inicia con un enfoque **local-first**, utilizando **SQLite** como almacenamiento local, con la posibilidad de integrar un backend en fases posteriores.
+
+---
+
+## Estado actual del proyecto
+
+Actualmente el proyecto incluye:
+
+- estructura base de carpetas organizada por módulos,
+- tema visual base,
+- dashboard principal,
+- navegación inicial entre vistas,
+- configuración de base de datos local con `sqflite`,
+- tabla de tipos de movimiento,
+- arquitectura inicial tipo MVC práctico para Flutter.
+
+---
+
+## Tecnologías utilizadas
+
+- **Flutter**
+- **Dart**
+- **SQLite**
+- **sqflite**
+- **path**
+
+---
+
+## Arquitectura del proyecto
+
+El proyecto sigue una organización modular por responsabilidades.
+
+### Estructura general
+
+```text
+lib/
+├── core/
+│   ├── constants/
+│   ├── database/
+│   ├── theme/
+│   └── utils/
+├── shared/
+│   ├── extensions/
+│   └── widgets/
+├── features/
+│   ├── home/
+│   └── tipo_movimiento/
+└── main.dart
