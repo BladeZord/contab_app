@@ -10,9 +10,9 @@ class AppFooter extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         '© 2026 Contab App',
-        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: Colors.grey[600],
-            ),
+        style: Theme.of(
+          context,
+        ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
       ),
     );
   }

@@ -18,22 +18,13 @@ class ActivityTile extends StatelessWidget {
       contentPadding: EdgeInsets.zero,
       leading: const CircleAvatar(
         backgroundColor: Color(0xFFEDE9FE),
-        child: Icon(
-          Icons.attach_money_rounded,
-          color: Color(0xFF4F46E5),
-        ),
+        child: Icon(Icons.attach_money_rounded, color: Color(0xFF4F46E5)),
       ),
-      title: Text(
-        title,
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-      ),
+      title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
       subtitle: Text(subtitle),
       trailing: Text(
         amount,
-        style: const TextStyle(
-          fontWeight: FontWeight.bold,
-        ),
+        style: const TextStyle(fontWeight: FontWeight.bold),
       ),
     );
   }

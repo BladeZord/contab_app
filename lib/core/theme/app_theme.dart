@@ -32,10 +32,7 @@ class AppTheme {
           fontWeight: FontWeight.w600,
           color: textColor,
         ),
-        bodyMedium: TextStyle(
-          fontSize: 14,
-          color: textColor,
-        ),
+        bodyMedium: TextStyle(fontSize: 14, color: textColor),
       ),
       cardTheme: CardThemeData(
         color: surfaceColor,
@@ -43,6 +40,38 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
           side: const BorderSide(color: Color(0xFFE2E8F0)),
+        ),
+      ),
+    );
+  }
+
+  static ThemeData get dark {
+    const primaryColor = Color(0xFF93C5FD);
+    const backgroundColor = Color(0xFF0F172A);
+    const surfaceColor = Color(0xFF111827);
+    const textColor = Color(0xFFF8FAFC);
+
+    return ThemeData(
+      useMaterial3: true,
+      scaffoldBackgroundColor: backgroundColor,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: primaryColor,
+        brightness: Brightness.dark,
+        primary: primaryColor,
+        surface: surfaceColor,
+      ),
+      appBarTheme: const AppBarTheme(
+        centerTitle: false,
+        elevation: 0,
+        backgroundColor: surfaceColor,
+        foregroundColor: textColor,
+      ),
+      cardTheme: CardThemeData(
+        color: surfaceColor,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: const BorderSide(color: Color(0xFF334155)),
         ),
       ),
     );

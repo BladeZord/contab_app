@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app_header.dart';
 import 'responsive_container.dart';
+
 /*
   * AppShell es un wiget que hace de menú inferior y contenedor para las páginas principales de la aplicación.
   * Presenta las opciones de navegación y un footer común, además de un header con el título de la página.
@@ -26,11 +27,7 @@ class AppShell extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Expanded(
-              child: ResponsiveContainer(
-                child: body,
-              ),
-            ),
+            Expanded(child: ResponsiveContainer(child: body)),
             //const AppFooter(),
           ],
         ),

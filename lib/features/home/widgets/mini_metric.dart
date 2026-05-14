@@ -4,18 +4,14 @@ class MiniMetric extends StatelessWidget {
   final String label;
   final String value;
 
-  const MiniMetric({
-    super.key,
-    required this.label,
-    required this.value,
-  });
+  const MiniMetric({super.key, required this.label, required this.value});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.14),
+        color: Colors.white.withValues(alpha: 0.14),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
@@ -23,10 +19,7 @@ class MiniMetric extends StatelessWidget {
         children: [
           Text(
             label,
-            style: const TextStyle(
-              color: Colors.white70,
-              fontSize: 12,
-            ),
+            style: const TextStyle(color: Colors.white70, fontSize: 12),
           ),
           const SizedBox(height: 4),
           Text(

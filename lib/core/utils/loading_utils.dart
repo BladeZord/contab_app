@@ -19,9 +19,7 @@ class LoadingUtils {
                   child: CircularProgressIndicator(strokeWidth: 3),
                 ),
                 const SizedBox(width: 16),
-                Expanded(
-                  child: Text(message ?? 'Cargando...'),
-                ),
+                Expanded(child: Text(message ?? 'Cargando...')),
               ],
             ),
           ),

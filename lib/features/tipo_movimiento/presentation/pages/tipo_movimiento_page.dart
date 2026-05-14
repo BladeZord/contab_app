@@ -46,9 +46,7 @@ class _TipoMovimientoPageState extends State<TipoMovimientoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tipos de movimiento'),
-      ),
+      appBar: AppBar(title: const Text('Tipos de movimiento')),
       floatingActionButton: FloatingActionButton(
         onPressed: _irACrear,
         child: const Icon(Icons.add),
@@ -56,9 +54,7 @@ class _TipoMovimientoPageState extends State<TipoMovimientoPage> {
       body: Builder(
         builder: (_) {
           if (controller.isLoading) {
-            return const AppLoading(
-              message: 'Cargando tipos de movimiento...',
-            );
+            return const AppLoading(message: 'Cargando tipos de movimiento...');
           }
 
           if (controller.error != null) {

@@ -6,7 +6,7 @@ class TipoMovimientoController extends ChangeNotifier {
   final TipoMovimientoRepository _repository;
 
   TipoMovimientoController({TipoMovimientoRepository? repository})
-      : _repository = repository ?? TipoMovimientoRepository();
+    : _repository = repository ?? TipoMovimientoRepository();
 
   final List<TipoMovimientoModel> _items = [];
   List<TipoMovimientoModel> get items => List.unmodifiable(_items);

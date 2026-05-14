@@ -17,7 +17,7 @@ class _CrearTipoMovimientoPageState extends State<CrearTipoMovimientoPage> {
   final _nombreController = TextEditingController();
   final _descripcionController = TextEditingController();
 
-  bool _guardando = false;
+  static const bool _guardando = false;
 
   @override
   void dispose() {

@@ -6,7 +6,7 @@ class TipoMovimientoRepository {
   final AppDatabase _appDatabase;
 
   TipoMovimientoRepository({AppDatabase? appDatabase})
-      : _appDatabase = appDatabase ?? AppDatabase.instance;
+    : _appDatabase = appDatabase ?? AppDatabase.instance;
 
   Future<int> crear(TipoMovimientoModel tipo) async {
     final db = await _appDatabase.db;
@@ -20,10 +20,7 @@ class TipoMovimientoRepository {
   Future<List<TipoMovimientoModel>> listar() async {
     final db = await _appDatabase.db;
 
-    final result = await db.query(
-      'tipo_movimiento',
-      orderBy: 'id DESC',
-    );
+    final result = await db.query('tipo_movimiento', orderBy: 'id DESC');
 
     return result.map(TipoMovimientoModel.fromMap).toList();
   }
@@ -60,10 +57,6 @@ class TipoMovimientoRepository {
   Future<int> eliminar(int id) async {
     final db = await _appDatabase.db;
 
-    return await db.delete(
-      'tipo_movimiento',
-      where: 'id = ?',
-      whereArgs: [id],
-    );
+    return await db.delete('tipo_movimiento', where: 'id = ?', whereArgs: [id]);
   }
 }
